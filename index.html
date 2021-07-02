@@ -1,0 +1,254 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <title>Health Log</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap" rel="stylesheet">
+    </head>
+    <body style="background-color: lightgreen;">
+        <div class="container">
+            <center>
+                <h1 id="title">Welcome!</h1>
+                <hr>
+                <h3 id="header">We will log the vitamins you get from the fruits and vegetables you eat</h3>
+                <button style="float: right;" onclick="setGoals()" class="btn btn-primary">Set Goals</button>
+                <br>
+                <br>
+                <button style="float: right;" onclick="reset()" class="btn btn-primary">Reset</button>
+                <br>
+                <div id="input_div"></div>
+                <br>
+                <b style="float: right;" style="font-size: 20px;" id="goals"></b>
+                <br>
+                <div style="float: right;" id="fruit_log"></div>
+                <br>
+                <div style="float: right;" id="vegetable_log"></div>
+                <br>
+                <div id="goal_achieved"></div>
+                <br>
+                <h2>Fruits</h2>
+                <div class="container row" style="margin-right: 30px; margin-left: 30px;">
+                    <div class="fruit col row" style="background-color: rgb(236, 109, 109);"> 
+                        <img src="apple2.png" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Apple</p>
+                            <p>One serving: about 1 small apple or 3/4 cups</p>
+                            <b>Calories: 75</b>
+                            <b>High in antioxidants</b>
+                            <br>
+                            <button onclick="addToFruit_1()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="fruit col row" style="background-color:rgb(215, 224, 86);"> 
+                        <img src="banana.jpg" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Banana</p>
+                            <p>One serving: about .60 of a cup</p>
+                            <b>Calories: 110</b>
+                            <b>High in potassium</b>
+                            <br>
+                            <button onclick="addToFruit_2()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="fruit col row" style="background-color: darkgreen;"> 
+                        <img src="watermelon.jpg" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Watermelon</p>
+                            <p>One serving: 1 cup</p>
+                            <b>Calories: 47</b>
+                            <b>Watermelon is 92% water so its good at keeping you hydrated</b>
+                            <br>
+                            <button onclick="addToFruit_3()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container row" style="margin-right: 30px; margin-left: 30px;">
+                    <div class="fruit col row" style="background-color: rgb(233, 186, 57);"> 
+                        <img src="orange.png" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Orange</p>
+                            <p>One serving: about 1 large orange or .8 of a cup</p>
+                            <b>Calories: 87</b>
+                            <b>High in Vitamin C</b>
+                            <br>
+                            <button onclick="addToFruit_4()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="fruit col row" style="background-color:rgb(122, 170, 77);"> 
+                        <img src="Cantaloupe-Melon.jpg" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Cantaloupe</p>
+                            <p>One serving: 1 cup </p>
+                            <b>Calories: 160</b>
+                            <b>Also high in potassium</b>
+                            <br>
+                            <button onclick="addToFruit_5()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="fruit col row" style="background-color: rgb(241, 89, 69);"> 
+                        <img src="strawberry.png" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Strawberry</p>
+                            <p>One serving: 1 cup</p>
+                            <b>Calories: 46</b>
+                            <b>Also good for vitamin C</b>
+                            <br>
+                            <button onclick="addToFruit_6()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container row" style="margin-right: 30px; margin-left: 30px;">
+                    <div class="fruit col row" style="background-color: rgb(160, 46, 236);"> 
+                        <img src="Grapes.jpg" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Grapes</p>
+                            <p>One serving: 1 cup</p>
+                            <b>Calories: 104</b>
+                            <b>Also high in potassium</b>
+                            <br>
+                            <button onclick="addToFruit_7()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="fruit col row" style="background-color:rgb(247, 176, 23);"> 
+                        <img src="mango.jpg" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Mango</p>
+                            <p>One serving: 3/4 of a cup </p>
+                            <b>Calories: 70</b>
+                            <b>Also high in vitamin C</b>
+                            <br>
+                            <button onclick="addToFruit_8()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="fruit col row" style="background-color: rgb(172, 68, 55);"> 
+                        <img src="Cherry.jpg" class="col img">
+                        <div class="col">
+                            <p style="font-size: 20px;">Cherry</p>
+                            <p>One serving: 1 cup</p>
+                            <b>Calories: 77</b>
+                            <b>High in fiber</b>
+                            <br>
+                            <button onclick="addToFruit_9()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                
+                <h2>Vegetables</h2>
+                <div class="container row" style="margin-right: 30px; margin-left: 30px;">
+                    <div class="veggie col row" style="background-color: rgb(115, 155, 47);">
+                        <img class="col img" src="brocoli.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Broccoli</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 16</b>
+                            <b>High in Calcium, Pottasium, and many other things</b>
+                            <br>
+                            <button onclick="addToVeggies()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="veggie col row" style="background-color: rgb(216, 170, 43);">
+                        <img class="col img" src="carrot.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Carrot</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 23</b>
+                            <b>High in vitamin A</b>
+                            <br>
+                            <button onclick="addToVeggies2()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="veggie col row" style="background-color: rgb(90, 226, 97);">
+                        <img class="col img" src="iceberg.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Lettuce</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 3</b>
+                            <b>High in calcium and is very light in calories</b>
+                            <br>
+                            <button onclick="addToVeggies3()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container row" style="margin-right: 30px; margin-left: 30px;">
+                    <div class="veggie col row" style="background-color: rgb(211, 208, 64);">
+                        <img class="col img" src="Corn.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Corn</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 66</b>
+                            <b>High in Fiber</b>
+                            <br>
+                            <button onclick="addToVeggies4()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="veggie col row" style="background-color: rgb(100, 235, 100);">
+                        <img class="col img" src="cabbage.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Cabbage</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 9</b>
+                            <b>High in vitamin C and K</b>
+                            <br>
+                            <button onclick="addToVeggies5()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="veggie col row" style="background-color: rgb(57, 143, 61);">
+                        <img class="col img" src="spinach.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Spinach</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 3</b>
+                            <b>High in vitamin K and light in calories</b>
+                            <br>
+                            <button onclick="addToVeggies6()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container row" style="margin-right: 30px; margin-left: 30px;">
+                    <div class="veggie col row" style="background-color: rgb(184, 109, 87);">
+                        <img class="col img" src="potato.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Potato</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 58</b>
+                            <b>High in vitamin C and Fiber</b>
+                            <br>
+                            <button onclick="addToVeggies7()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="veggie col row" style="background-color: rgb(74, 150, 74);">
+                        <img class="col img" src="cucumber.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Cucumber</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 8</b>
+                            <b>High in vitamin K, C, and B</b>
+                            <br>
+                            <button onclick="addToVeggies8()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                    <div class="veggie col row" style="background-color: rgb(76, 177, 81);">
+                        <img class="col img" src="greenbeans.jpg">
+                        <div class="col">
+                            <p style="font-size: 20px;">Green Beans</p>
+                            <p>One serving: 1/2 cup</p>
+                            <b>Calories: 17</b>
+                            <b>High in vitamin K and have a decent amount of calcium</b>
+                            <br>
+                            <button onclick="addToVeggies9()" class="btn btn-primary">Add 1 serving</button>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+    </body>
+</html>
